@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SampleSpacex</string>
+    <string name="desc">Description about the rocket...</string>
+    <string name="date">2021-02-12</string>
+    <string name="rockets">Rockets</string>
+    <string name="name">Name : </string>
+    <string name="cost">Cost : </string>
+    <string name="wikipedia">Wikipedia : </string>
+    <string name="sucess_rate">Sucess Rate : </string>
+    <string name="description">Description : </string>
+    <string name="rocket_name">Rocket Name</string>
+    <string name="launch_success">Success</string>
+    <string name="launch_failure">Failure</string>
+    <string name="cd_rocket_image">Rocket Image</string>
+    <string name="error_message">Please check your network connection\ntry again.</string>
+</resources>

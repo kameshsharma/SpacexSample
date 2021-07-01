@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".features.detail.RocketDetailFragment">
+
+    <TextView
+        android:id="@+id/tvRocketName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp16"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvFirstFlight"
+        app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+        android:gravity="start" app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"
+        tools:text="@string/rocket_name" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRocket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="@dimen/dp20"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRocketName"
+            app:layout_constraintVertical_bias="0.0"
+            />
+
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipLaunchSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkable="true"
+        android:checked="true"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp16"
+        android:textColor="@color/white"
+        app:chipBackgroundColor="@color/chip_color_states"
+        app:chipIconVisible="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Success" />
+
+
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintEnd_toStartOf="@+id/sucessRate"
+            android:layout_marginStart="@dimen/dp14"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvRocket"
+            android:textColor="@color/black"
+            tools:text="@string/date" />
+
+        <TextView
+            android:id="@+id/sucessRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:ellipsize="end"
+            android:maxLines="6"
+            android:textColor="@color/black"
+            android:layout_marginEnd="@dimen/dp14"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintTop_toBottomOf="@+id/rvRocket"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="@string/desc" />
+
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/dp14"
+        android:layout_marginEnd="@dimen/dp14"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintTop_toBottomOf="@+id/sucessRate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/desc" />
+
+    <TextView
+        android:id="@+id/wikipedia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_marginStart="@dimen/dp14"
+        android:layout_marginEnd="@dimen/dp14"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/date" />
+
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/circularProgressBar"
+        android:layout_width="@dimen/dp100"
+        android:layout_height="@dimen/dp100"
+        app:cpb_background_progressbar_color="@color/primaryDark"
+        app:cpb_background_progressbar_width="@dimen/dp5"
+        app:cpb_progress_direction="to_right"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cpb_progressbar_color="@color/failure"
+        app:cpb_progressbar_width="@dimen/dp10"
+        app:cpb_round_border="false" />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp32"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp32"
+        android:layout_marginBottom="@dimen/dp16"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/rvRocket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
+        android:lineSpacingExtra="0.5dp"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/errorAnim"
+        app:layout_constraintVertical_bias="0.0"
+        android:text="Please check your network connection\ntry again." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

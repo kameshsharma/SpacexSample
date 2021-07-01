@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/circularProgressBar"
+        android:layout_width="@dimen/dp100"
+        android:layout_height="@dimen/dp100"
+        app:cpb_background_progressbar_color="@color/primaryDark"
+        app:cpb_background_progressbar_width="@dimen/dp5"
+        app:cpb_progress_direction="to_right"
+        android:layout_gravity="center"
+        app:cpb_progressbar_color="@color/failure"
+        app:cpb_progressbar_width="@dimen/dp10"
+        app:cpb_round_border="false" />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp32"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp32"
+        android:layout_marginBottom="@dimen/dp16"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/rvRocket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
+        android:lineSpacingExtra="0.5dp"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/errorAnim"
+        app:layout_constraintVertical_bias="0.0"
+        android:text="@string/error_message" />
+
+</merge>
